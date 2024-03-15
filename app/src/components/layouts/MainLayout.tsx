@@ -5,7 +5,7 @@ function MainLayout() {
   const theme = useMantineTheme();
 
   return (
-    <Flex direction="column" p="xs" maw={theme.breakpoints.md} mx="auto">
+    <Flex direction="column" p="xs" mx="auto" maw={theme.breakpoints.md} h="100vh">
       <Outlet />
     </Flex >
   )

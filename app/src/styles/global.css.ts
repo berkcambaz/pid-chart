@@ -5,5 +5,5 @@ globalStyle("body", {
 });
 
 globalStyle("#root", {
-  height: "100%",
+
 });
