@@ -1,6 +1,7 @@
 import { Button, Card, Checkbox, Flex, InputLabel, NumberInput, Progress, Slider, Text } from "@mantine/core"
 import { useEffect, useRef, useState } from "react"
 import { ColorType, IChartApi, UTCTimestamp, createChart } from 'lightweight-charts';
+import { IconPercentage } from "@tabler/icons-react";
 
 function Home() {
   const chartRef = useRef<HTMLDivElement>(null);
@@ -117,10 +118,22 @@ function Home() {
 
       </Flex>
 
-      <Flex align="center" gap="xs">
-        <Checkbox label="Add Noise" checked={noise} onChange={(ev) => setNoise(ev.currentTarget.checked)} />
-        <InputLabel size="x">Noise Range %</InputLabel>
-        <NumberInput value={noiseRange} onChange={(v) => setNoiseRange(Number(v))} />
+      <Flex direction="column" align="start">
+
+        <InputLabel htmlFor="noise-range">Noise Range</InputLabel>
+
+        <Flex align="center" gap="md">
+          <NumberInput
+            id="noise-range"
+            leftSection={<IconPercentage />}
+            value={noiseRange} onChange={(v) => setNoiseRange(Number(v))}
+          />
+          <Checkbox
+            label="Add Noise"
+            checked={noise} onChange={(ev) => setNoise(ev.currentTarget.checked)}
+          />
+        </Flex>
+
       </Flex>
 
       <Card withBorder p={0} style={{ flex: 1 }}>
