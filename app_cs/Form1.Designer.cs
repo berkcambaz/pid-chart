@@ -28,11 +28,8 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-			System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-			System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.btnDisconnect = new System.Windows.Forms.Button();
 			this.cbBaud = new System.Windows.Forms.ComboBox();
@@ -192,34 +189,23 @@
 			// 
 			// chart1
 			// 
-			chartArea1.Name = "ChartArea1";
-			this.chart1.ChartAreas.Add(chartArea1);
-			legend1.Name = "Legend1";
-			this.chart1.Legends.Add(legend1);
+			chartArea8.Name = "ChartArea1";
+			this.chart1.ChartAreas.Add(chartArea8);
+			legend8.Name = "Legend1";
+			this.chart1.Legends.Add(legend8);
 			this.chart1.Location = new System.Drawing.Point(12, 146);
 			this.chart1.Name = "chart1";
-			series1.ChartArea = "ChartArea1";
-			series1.Legend = "Legend1";
-			series1.Name = "Temperature";
-			series2.ChartArea = "ChartArea1";
-			series2.Legend = "Legend1";
-			series2.Name = "Setpoint";
-			series3.ChartArea = "ChartArea1";
-			series3.Legend = "Legend1";
-			series3.Name = "PWM";
-			this.chart1.Series.Add(series1);
-			this.chart1.Series.Add(series2);
-			this.chart1.Series.Add(series3);
 			this.chart1.Size = new System.Drawing.Size(559, 187);
 			this.chart1.TabIndex = 2;
 			this.chart1.Text = "chart1";
 			// 
 			// hScrollBar1
 			// 
-			this.hScrollBar1.Location = new System.Drawing.Point(9, 337);
+			this.hScrollBar1.Location = new System.Drawing.Point(54, 336);
 			this.hScrollBar1.Name = "hScrollBar1";
-			this.hScrollBar1.Size = new System.Drawing.Size(565, 17);
+			this.hScrollBar1.Size = new System.Drawing.Size(371, 18);
 			this.hScrollBar1.TabIndex = 3;
+			this.hScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBar1_Scroll);
 			// 
 			// label4
 			// 
@@ -245,6 +231,7 @@
 			this.btnSend.TabIndex = 3;
 			this.btnSend.Text = "Send";
 			this.btnSend.UseVisualStyleBackColor = true;
+			this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
 			// 
 			// rtbTerminal
 			// 
